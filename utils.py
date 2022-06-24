@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 
 def setFilterOptions(args):
     minimum_rating = int(args[0])
