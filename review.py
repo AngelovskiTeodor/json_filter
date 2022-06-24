@@ -46,6 +46,12 @@ class ReviewDTO:
         self.href = href
         self.logoHref = logoHref
         self.photos = photos
+    
+    def getRating(self):
+        return self.rating
+
+    def getReviewCreatedOnDate(self):
+        return self.reviewCreatedOnDate
 
 
 class DescriptiveReviewDTO(ReviewDTO):
