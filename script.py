@@ -1,6 +1,7 @@
 import json
 import sys
 from utils import setFilterOptions
+from review import ReviewFactory, ReviewDTO, DescriptiveReviewDTO
 
 if __name__=="__main__":
     json_file = open('reviews.json', "r", encoding='utf-8-sig')
@@ -19,3 +20,9 @@ if __name__=="__main__":
     if len(args)==4:
         minimum_rating, rating, text, date = setFilterOptions(args)
 
+    reviews = []
+    for o in json_data:
+        new_review = ReviewFactory(**o)
+        reviews.append(new_review)
+
+    
