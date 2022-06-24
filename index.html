@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Filter</title>
+</head>
+<body>
+    <h1>JSON Filter</h1>
+    <form action="/filter.cgi">
+        <label>Minimum rating:</label>
+        <input type="radio" id="1" name="minimum_rating" value="1">
+        <label for="minimum_rating">1</label>
+        <input type="radio" id="2" name="minimum_rating" value="2">
+        <label for="minimum_rating">2</label>
+        <input type="radio" id="3" name="minimum_rating" value="3">
+        <label for="minimum_rating">3</label>
+        <input type="radio" id="4" name="minimum_rating" value="4">
+        <label for="minimum_rating">4</label>
+        <input type="radio" id="5" name="minimum_rating" value="5">
+        <label for="minimum_rating">5</label>
+        <br>
+        <label>Rating order:</label>
+        <input type="radio" id="highest" name="rating_order" value="HIGHEST">
+        <label for="rating_order">Highest rating</label>
+        <input type="radio" id="lowest" name="rating_order" value="LOWEST">
+        <label for="rating_order">Lowest rating</label>
+        <br>
+        <label>Prioritize text:</label>
+        <input type="radio" id="yes" name="prioritize_text" value="Yes">
+        <label for="prioritize_text">Yes</label>
+        <input type="radio" id="no" name="prioritize_text" value="No">
+        <label for="prioritize_text">No</label>
+        <br>
+        <label>Order by date:</label>
+        <input type="radio" id="newest" name="date_order" value="NEWEST">
+        <label for="date_order">Newest</label>
+        <input type="radio" id="oldest" name="date_order" value="OLDEST">
+        <label for="date_order">Oldest</label>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>
