@@ -49,4 +49,56 @@ class ReviewDTO:
 
 
 class DescriptiveReviewDTO(ReviewDTO):
-    pass
+    def __init__(self,
+                    id,
+                    reviewId,
+                    reviewFullText,
+                    reviewText,
+                    numLikes,
+                    numComments,
+                    numShares,
+                    rating,
+                    reviewCreatedOn,
+                    reviewCreatedOnDate,
+                    reviewCreatedOnTime,
+                    reviewerId,
+                    reviewerUrl,
+                    reviewerName,
+                    reviewerEmail,
+                    sourceType,
+                    isVerified,
+                    source,
+                    sourceName,
+                    sourceId,
+                    tags,
+                    href,
+                    logoHref,
+                    photos
+                ):
+        super().__init__(
+                    id,
+                    reviewId,
+                    numLikes,
+                    numComments,
+                    numShares,
+                    rating,
+                    reviewCreatedOn,
+                    reviewCreatedOnDate,
+                    reviewCreatedOnTime,
+                    reviewerId,
+                    reviewerUrl,
+                    reviewerName,
+                    reviewerEmail,
+                    sourceType,
+                    isVerified,
+                    source,
+                    sourceName,
+                    sourceId,
+                    tags,
+                    href,
+                    logoHref,
+                    photos,
+        )
+        self.reviewFullText = reviewFullText
+        self.reviewText = reviewText
+
