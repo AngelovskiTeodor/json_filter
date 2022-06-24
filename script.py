@@ -1,6 +1,6 @@
 import json
 import sys
-from utils import setFilterOptions
+from utils import setFilterOptions, text_prioritize, prioritize_highest_rating, prioritize_newest
 from review import ReviewFactory, ReviewDTO, DescriptiveReviewDTO
 
 if __name__=="__main__":
@@ -28,3 +28,6 @@ if __name__=="__main__":
     reviews.sort(key=lambda r: (text_prioritize(prioritize_by_text ,isinstance(r, DescriptiveReviewDTO)),
                                 prioritize_highest_rating(rating, r.getRating()),
                                 prioritize_newest(date, r.getReviewCreatedOnDate())))
+
+    for r in reviews:
+        print(r)
