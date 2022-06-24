@@ -25,6 +25,8 @@ if __name__=="__main__":
         new_review = ReviewFactory(**o)
         reviews.append(new_review)
 
+    reviews = filter(lambda r: (r.getRating() >= minimum_rating), reviews)
+    reviews = list(reviews)
     reviews.sort(key=lambda r: (text_prioritize(prioritize_by_text ,isinstance(r, DescriptiveReviewDTO)),
                                 prioritize_highest_rating(rating, r.getRating()),
                                 prioritize_newest(date, r.getReviewCreatedOnDate())))
