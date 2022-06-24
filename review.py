@@ -54,7 +54,7 @@ class ReviewDTO:
         return self.reviewCreatedOnDate
 
     def __str__(self):
-        ret = self.id.__str__() +": "+ self.rating.__str__() +" stars on "+ self.reviewCreatedOnDate.__str__()
+        ret = self.id.__str__() +": "+ self.rating.__str__() +" stars from "+ self.reviewerName +"on "+ self.reviewCreatedOnDate.__str__()
         return ret
 
 
@@ -113,7 +113,7 @@ class DescriptiveReviewDTO(ReviewDTO):
         self.reviewText = reviewText
 
     def __str__(self):
-        ret = self.id.__str__() +": "+ self.reviewFullText +", "+ self.rating.__str__() +" stars on "+ self.reviewCreatedOnDate.__str__()
+        ret = self.id.__str__() +": "+ self.reviewFullText +", "+ self.rating.__str__() +" stars from "+ self.reviewerName +"on "+ self.reviewCreatedOnDate.__str__() 
         return ret
 
 def ReviewFactory(  id,
